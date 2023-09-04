@@ -1,0 +1,28 @@
+--Create a sports gear store database
+
+
+CREATE TABLE sports_team_items (id INTEGER, team_name TEXT, sport TEXT, price INTEGER, size TEXT);
+
+INSERT INTO sports_team_items (id, team_name, sport, price, size) VALUES (1, "Giants", "Football", 20, "M"); 
+INSERT INTO sports_team_items (id, team_name, sport, price, size) VALUES (2, "Liverpool", "Soccer", 20, "M");
+Insert INTO sports_team_items (id, team_name, sport, price, size) VALUES (3, "Yankees", "Baseball", 10, "M");
+Insert Into sports_team_items (id, team_name, sport, price, size) VALUES (4, "Devils", "Hockey", 15, "M");
+Insert Into sports_team_items (id, team_name, sport, price, size) VALUES (5, "Lightning", "Hockey", 15, "M");
+Insert Into sports_team_items (id, team_name, sport, price, size) VALUES (6, "Magic", "Basketball",10, "M");
+Insert Into sports_team_items (id, team_name, sport, price, size) VALUES (7, "USMNT", "Soccer", 15, "M");
+Insert Into sports_team_items (id, team_name, sport, price, size) VALUES (8, "Colombia", "Soccer", 15, "M");
+Insert into sports_team_items (id, team_name, sport, price, size) VALUES (9, "Giants", "Football", 20, "L");
+Insert Into sports_team_items (id, team_name, sport, price, size) VALUES (10, "Yankees", "Baseball", 10, "L");
+Insert into sports_team_items (id, team_name, sport, price, size) VALUES (11, "Liverpool", "Soccer", 20, "L");
+Insert into sports_team_items (id, team_name, sport, price, size) VALUES (12, "Devils", "Hockey", 15, "L");
+Insert into sports_team_items (id, team_name, sport, price, size) VALUES (13, "Lightning", "Hockey", 15, "L");
+Insert into sports_team_items (id, team_name, sport, price, size) VALUES (14, "USMNT", "Soccer", 15, "L");
+Insert into sports_team_items (id, team_name, sport, price, size) VALUES (15, "Colombia", "Soccer", 15, "L");
+
+--display database by teams and order by price?
+SELECT * FROM sports_team_items 
+Group BY team_name 
+ORDER BY price DESC ;
+
+--what sport has the most items available?
+SELECT MAX(sport) FROM sports_team_items;
